@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<section class="content-header">
+			<h1>View Waybill</h1>
+		</section>
+
+		<section class="content">
+			<div class="row">
+				<!-- left column -->
+				<div class="col-md-12">
+					<!-- general form elements -->
+					<div class="box box-primary">
+						<div class="box-header with-border">
+							<h3 class="box-title">view Waybill</h3>
+						</div>
+						<!-- /.box-header -->
+						<!-- form start -->
+						<form role="form" th:action="@{#}" th:object="${viewWaybilcmd}">
+							<input type="hidden" name="${_csrf.parameterName}"
+								value="${_csrf.token}" />
+							<div class="box-body">
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'Waybill Number : '" />
+									<label for="exampleInputEmail1" th:text="*{waybillNumber}" />
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'Description : '" />
+									<label for="exampleInputEmail1" th:text="*{description}" />
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'Create Date : '" /> <label
+										for="exampleInputEmail1" th:text="*{createDate}" />
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'Create UserName : '" />
+									<label for="exampleInputEmail1" th:text="*{createUserName}" />
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'Update Date : '" /> <label
+										for="exampleInputEmail1" th:text="*{updateDate}" />
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'Update UserName : '" />
+									<label for="exampleInputEmail1" th:text="*{updateUserName}" />
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'image : '" /> <a
+										th:href="@{/waybills/__*{id}__/image}" th:target="_blank">
+										<img th:src="@{/waybills/__*{id}__/image}" alt="img"
+										width="60px" height="60px" />Show Image
+									</a>
+								</div>
+								<div class="form-group">
+									<a th:href="@{/waybills/__*{id}__/update}"> 
+										<button type="button" class="btn btn-primary"> Edit Waybill </button>
+									</a>
+
+								</div>
+						</form>
+
+					</div>
+
+				</div>
+		</section>
+	</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<section class="content-header">
+			<h1>view manifest</h1>
+		</section>
+
+		<section class="content">
+			<div class="row">
+				<!-- left column -->
+				<div class="col-md-12">
+					<!-- general form elements -->
+					<div class="box box-primary">
+						<div class="box-header with-border">
+							<h3 class="box-title">view manifest</h3>
+						</div>
+						<!-- /.box-header -->
+						<!-- form start -->
+							<form role="form" th:action="@{#}"
+							th:object="${viewManifestcmd}" >
+							<input type="hidden" name="${_csrf.parameterName}"
+								value="${_csrf.token}" />
+							<div class="box-body">
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'manifestNumber : '" />  
+									<label for="exampleInputEmail1" th:text="*{manifestNumber}" /> 
+								</div>
+								
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'description : '" /> 
+									<label for="exampleInputEmail1" th:text="*{description}"/> 
+								</div>
+								
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'createDate : '" /> 
+									<label for="exampleInputEmail1" th:text="*{createDate}"/> 
+								</div>
+								
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'createUserName : '" /> 
+									<label for="exampleInputEmail1" th:text="*{createUserName}"/> 
+								</div>
+								
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'updateDate : '" /> 
+									<label for="exampleInputEmail1" th:text="*{updateDate}"/> 
+								</div>
+								
+								<div class="form-group">
+									<label for="exampleInputEmail1" th:text="'updateUserName : '" /> 
+									<label for="exampleInputEmail1" th:text="*{updateUserName}"/> 
+								</div>
+								
+								<div class="form-group">
+								<label for="exampleInputEmail1" th:text="'image : '" />
+									<a th:href="@{/manifests/__*{id}__/image}"
+									th:target="_blank">  <img
+										th:src="@{/manifests/__*{id}__/image}" alt="img"  width="60px" height="60px"/>show image </a>
+								</div>
+								<div class="form-group">
+								<a th:href="@{/manifests/__*{id}__/update}">
+									edit
+									</a>
+									<a th:href="@{/manifests/__*{id}__/update}"
+										th:target="_blank"> 
+										<button for="exampleInputEmail1" >Edit Manifest</button>
+										</a>
+									
+								</div>
+								
+						</form>
+						
+						
+					</div>
+
+				</div>
+		</section>
+	</div>
+
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!-- <html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div layout:fragment="content" class="container">
+	<table th:object="${viewManifestcmd}">
+	<tr>
+		<td>waybillNumber<td>
+		<td><input type="text" th:field="*{manifestNumber}" /> 
+		<td>
+	
+	</tr>
+	<tr>
+		<td>description<td>
+		<td>	<input type="text" th:field="*{description}" /> <td>
+	
+	</tr>
+	<tr>
+		<td>createDate<td>
+		<td><input type="text" th:field="*{createDate}" /> <td>
+	
+	</tr>
+	<tr>
+		<td>createUserName<td>
+		<td><input type="text" th:field="*{createUserName}" /> <td>
+	
+	</tr>
+	<tr>
+		<td>updateDate<td>
+		<td><input type="text" th:field="*{updateDate}" /> <td>
+	
+	</tr>
+	<tr>
+		<td>updateUserName<td>
+		<td><input type="text" th:field="*{updateUserName}" /> <td>
+	
+	</tr>
+	<tr>
+		<td>
+	<a th:href="@{/manifests/__*{id}__/image}" th:target="_blank">
+	<img th:src="@{/manifests/__*{id}__/image}" alt="img" /></a>
+		 </td>
+	</tr>
+	</table>
+	</div>	
+</body>
+</html> -->

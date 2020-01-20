@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<div id="101" th:replace="fragments/header :: header"></div>
+<body>
+	listwaybills
+	<table class="table" border="1">
+		<thead>
+			<tr>
+				<th>Client ID</th>
+				<th>waybillNumber</th>
+				<th>Description</th>
+				<th>createDate</th>
+				<th>createUserName</th>
+				<th>updateDate</th>
+				<th>updateUserName</th>
+				<th>originalFileName</th>
+				<th>set</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="thisWaybill : ${waybills}">
+				<td th:text="${thisWaybill.id}"></td>
+				<td th:text="${thisWaybill.waybillNumber}"></td>
+				<td th:text="${thisWaybill.description}"></td>
+				<td th:text="${thisWaybill.createDate}"></td>
+				<td th:text="${thisWaybill.createUserName}"></td> 
+				<td th:text="${thisWaybill.updateDate}"></td>
+				<td th:text="${thisWaybill.updateUserName}"></td>
+				<td th:text="${thisWaybill.originalFileName}"></td>
+				<td><a th:href="@{/waybills/__${thisWaybill.id}__}">view</a> </td>
+				<td><a th:href="@{/waybills/__${thisWaybill.id}__/update}">edit</a> </td>
+				<td><a th:href="@{/waybills/delete/__${thisWaybill.id}__}">delete</a> </td>
+				
+				<td><a th:href="@{/waybills/__${thisWaybill.id}__/image}" th:target="_blank">view Image</a> </td>
+			</tr>
+		</tbody>
+	</table>
+	
+	
+	
+	
+</html>

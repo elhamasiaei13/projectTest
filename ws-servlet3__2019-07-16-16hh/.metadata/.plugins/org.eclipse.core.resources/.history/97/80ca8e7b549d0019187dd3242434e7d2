@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div layout:fragment="content" class="container">
+	<form  th:action="@{/manifests/}" th:object="${newManifestCmd}" method="post"  enctype="multipart/form-data">
+		<table>
+		<tr>
+		<td>manifestNumber</td>
+		<td><input type="text" th:field="*{manifestNumber}" /> </td>
+		</tr>
+		<tr>
+		<td>description</td>
+		<td><input type="text" th:field="*{description}" /></td>
+		</tr>
+		<tr>
+		<td>file</td>
+		<td><input name="file" id="file" type="file" required /></td>
+		</tr>
+		<tr>
+	
+		<td> <input type="submit" value="save"/></td>
+		</tr>
+		</table>
+		
+	</form>
+</div>	
+</body>
+</html>

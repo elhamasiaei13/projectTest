@@ -1,0 +1,80 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<mvc:annotation-driven />
+
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	 <mvc:resources mapping="/image/**" location="/image/" />
+
+	<bean id="templateResolver"
+		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".html" />
+		<property name="templateMode" value="HTML5" />
+	</bean>
+
+	<bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+		<property name="templateEngine" ref="templateEngine" />
+	</bean>
+	
+
+	<bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">
+		<property name="templateResolver" ref="templateResolver" />
+		<property name="additionalDialects">
+                <set>
+                	<bean class="nz.net.ultraq.thymeleaf.LayoutDialect"/>
+                </set>
+        </property>
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+		
+	<bean id="ds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/jdbcexamples" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds" />
+	</bean>
+
+	 <bean id="dao"
+		class="com.parvanpajooh.cargoarchive.dao.WaybillDao">
+		<property name="template" ref="jt" />
+	</bean> 
+
+	 <bean id="userDao"
+		class="com.parvanpajooh.cargoarchive.dao.UserDao">
+		<property name="template" ref="jt" />
+	</bean> 
+	
+	 <bean id="ManifestDao"
+		class="com.parvanpajooh.cargoarchive.dao.ManifestDao">
+		<property name="template" ref="jt" />
+	</bean> 
+	
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" /> -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+   	  <property name="basename" value="messages" />
+    </bean>
+
+	<!-- <bean id="waybillService"
+		class="com.parvanpajooh.cargoarchive.service.WaybillService">
+		<property name="waybillService" ref="dao" />
+	</bean>
+
+	<bean id="WaybillController"
+		class="com.parvanpajooh.cargoarchive.controller.WaybillController">
+		<property name="waybillController" ref="waybillService" />
+	</bean> -->
+</beans>  

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="org.thymeleaf"/>
+		<item key="casesensitive" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="wrap" value="true"/>
+		<item key="wholeword" value="false"/>
+		<list key="findhistory">
+			<item value="org.thymeleaf"/>
+			<item value="username"/>
+			<item value="redire"/>
+			<item value="no mapping"/>
+			<item value="mapping"/>
+			<item value="entering save"/>
+			<item value="entering"/>
+			<item value="messageSource"/>
+			<item value="&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;&#x0A;    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:context=&quot;http://www.springframework.org/schema/context&quot; xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;&#x0A;    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans&#x0A;        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd&#x0A;        http://www.springframework.org/schema/context/&#x0A;        http://www.springframework.org/schema/context/spring-context-3.0.xsd&#x0A;        http://www.springframework.org/schema/mvc&#x0A;        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd&quot;&gt;&#x0A; &#x0A;    &lt;context:component-scan base-package=&quot;com.howtodoinjava.demo&quot; /&gt;&#x0A;     &#x0A;    &lt;mvc:resources mapping=&quot;/image/**&quot; location=&quot;/image/&quot; /&gt;&#x0A; &#x0A;    &lt;bean class=&quot;org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter&quot; /&gt;&#x0A;    &lt;bean class=&quot;org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping&quot; /&gt;&#x0A;     &#x0A;    &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;&#x0A;        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot; /&gt;&#x0A;        &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot; /&gt;&#x0A;    &lt;/bean&gt;&#x0A;     &#x0A;    &lt;bean id=&quot;messageSource&quot; class=&quot;org.springframework.context.support.ResourceBundleMessageSource&quot;&gt;&#x0A;        &lt;property name=&quot;basename&quot; value=&quot;messages&quot; /&gt;&#x0A;    &lt;/bean&gt;&#x0A;     &#x0A;    &lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.support.StandardServletMultipartResolver&quot;&gt;&lt;/bean&gt;&#x0A;     &#x0A;&lt;/beans&gt;"/>
+			<item value="multipartResolver"/>
+			<item value="window.onload"/>
+			<item value="totalUploaded"/>
+			<item value="bar"/>
+			<item value="onFileSelect"/>
+			<item value="debug"/>
+		</list>
+		<list key="replacehistory">
+			<item value="bar"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_WIDTH" value="338"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_HEIGHT" value="431"/>
+		<item key="DIALOG_X_ORIGIN" value="1369"/>
+		<item key="DIALOG_Y_ORIGIN" value="173"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="654"/>
+		<item key="DIALOG_Y_ORIGIN" value="416"/>
+	</section>
+</section>

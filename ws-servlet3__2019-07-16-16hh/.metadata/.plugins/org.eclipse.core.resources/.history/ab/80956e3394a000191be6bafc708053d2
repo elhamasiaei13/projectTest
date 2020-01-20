@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div layout:fragment="content">
+		<section class="content-header">
+			<h1>Update Waybill</h1>
+		</section>
+
+		<section class="content">
+			<div class="row">
+				<!-- left column -->
+				<div class="col-md-12">
+					<!-- general form elements -->
+					<div class="box box-primary">
+						<div class="box-header with-border">
+							<h3 class="box-title">Update Waybill</h3>
+						</div>
+						<!-- /.box-header -->
+						<!-- form start -->
+						<form th:action="@{/waybills/__${command.id}__}" method="post"
+							th:object="${command}" enctype="multipart/form-data" role="form">
+
+							<input type="hidden" th:field="*{id}" />
+
+
+							<div class="form-group">
+								<label for="exampleInputEmail1"> Waybill Number</label>
+								 <input type="text" class="form-control" id="exampleInputEmail1"
+									placeholder="Enter Waybill Number" th:field="*{waybillNumber}">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Description</label>
+								 <input type="text" class="form-control" id="exampleInputPassword1"
+									placeholder="Enter Description" th:field="*{description}">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Waybill Image</label>
+								 <input name="file" type="file" required id="exampleInputFile">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputEmail1" th:text="'image : '" />
+								 <a th:href="@{/waybills/__*{id}__/image}" th:target="_blank">
+									<img th:src="@{/waybills/__*{id}__/image}" alt="img"
+									width="60px" height="60px" />Show Image
+									</a>
+							</div>
+
+							<button class="btn btn-primary" type="submit">saveEdit
+							</button>
+
+						</form>
+					</div>
+
+				</div>
+		</section>
+	</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Edit waybill</h3>
+	<form th:action="@{/manifests/__${command.id}__}" method="post"
+		th:object="${command}" enctype="multipart/form-data" role="form">
+		
+		<table>
+			
+			<tr>
+				<td>manifestNumber</td>
+				<td><input type="text" th:field="*{manifestNumber}" /></td>
+			</tr>
+			
+			<tr>
+				<td>description</td>
+				<td><input type="text" th:field="*{description}" /></td>
+			</tr>
+			
+			<tr>
+				<td>file</td>
+				<td><input name="file" id="file" type="file" /></td>
+			</tr>
+			
+			
+			<tr>
+			<td><input type="hidden" th:field="*{id}" /></td>
+			</tr>
+			
+			<tr>
+			<td>
+			<a th:href="@{/manifests/__*{id}__/image}" th:target="_blank">
+			<img th:src="@{/manifests/__*{id}__/image}" alt="img" /></a>
+				 </td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="saveEdit" /></td>
+			</tr>	
+		</table>
+		
+	</form>
+</body>
+</html>

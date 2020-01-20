@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form class="form-horizontal" id="myForm" method="POST" enctype="multipart/form-data">
+  <fieldset>
+    <!-- File Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="papers">
+        Add Files
+      </label>
+      <div class="col-md-4">
+        <input name="papers" id="modalPapers" type="file" class="filestyle" multiple data-input="false">
+      </div>
+    </div>
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="submit"></label>
+      <div class="col-md-4">
+        <input type="button" value="Submit" name="submit" onclick="submitForm()" class="btn btn-success">
+      </div>
+    </div>
+  </fieldset>
+</form>
+<script type="text/javascript">
+function submitForm() {
+
+	  var paperElement = document.getElementById("modalPapers");
+
+	  if (!paperElement.value) {
+	    console.log("No files selected.")
+	    return;
+	  }
+	  var form = document.getElementById("myForm");
+	  var formData = new FormData(form);
+	  var xhr = getXMLHTTP();
+	  xhr.open('POST', "submitFiles");
+	  xhr.onreadystatechange = function() {
+	    if (xhr.readyState == 4 && xhr.status == 200) {
+	      console.log("Files Uploaded")
+	    }
+	  }
+	  xhr.send(formData);
+	}
+</script>
+</body>
+</html>

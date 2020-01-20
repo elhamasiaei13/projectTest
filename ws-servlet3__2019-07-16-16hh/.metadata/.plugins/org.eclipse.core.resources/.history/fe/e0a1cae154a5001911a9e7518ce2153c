@@ -1,0 +1,76 @@
+
+<aside class="main-sidebar" th:fragment="sidebar">
+	<section class="sidebar">
+	
+		 <ul class="sidebar-menu " data-widget="tree">
+
+			<li >
+			<a href="#">
+			 	<i class="fa fa-files-o"></i>
+			  	<span>waybills</span>
+				<span class="pull-right-container"> </span>
+				 <span class="label label-primary pull-right">4</span>
+			</a>
+
+					<ul class="treeview-menu" style="display: block;">
+						<li class="active treeview">
+ 							<a th:href="@{/waybills/}"> 
+								<ion-icon name="list-box">
+								</ion-icon> view list waybill
+							</a>
+						</li>
+						<li>
+							<a th:href="@{/waybills/new}"> 
+							<ion-icon name="ios-card" md="md-card">
+							</ion-icon> create new waybill
+							</a>
+						</li>
+						<li>
+							<a th:href="@{/waybills/new/bulk}"> 
+							<ion-icon name="ios-card" md="md-card">
+							</ion-icon> create  bulk new waybill
+							</a>
+						</li>
+					</ul>
+			</li>
+			<li class="">
+				<a href="#"> 
+					<i class="fa fa-files-o"> </i>
+						 <span>manifests</span>
+					<span class="pull-right-container"> </span>
+				</a>
+				<ul class="treeview-menu" style="display: block;">
+					<li>
+						<a th:href="@{/manifests/}"> 
+						<ion-icon name="list-box"></ion-icon>
+								view list manifest
+						</a>
+					</li>
+					
+					<li>
+		  				<a th:href="@{/manifests/new}">
+		  					<ion-icon ios="ios-card" md="md-card">
+		  					 </ion-icon>create  new manifest </a>
+					</li>
+					
+					<li>
+		  				<a th:href="@{/manifests/new/bulk}">
+		  					<ion-icon ios="ios-card" md="md-card">
+		  					 </ion-icon>create bulk new manifest </a>
+					</li>
+				</ul>
+			</li>
+
+			 <li class="active treeview menu-open">
+				<a th:href="@{/logout}">
+					 <span>log out</span>
+					  </a>
+					 <ion-icon ios="ios-exit" md="md-exit"></ion-icon>
+				
+			</li>  
+		</ul> 
+	 </section>
+</aside>
+
+
+

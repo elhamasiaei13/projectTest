@@ -1,0 +1,50 @@
+
+<aside class="main-sidebar" th:fragment="sidebar">
+	<section class="sidebar">
+
+		<ul class="sidebar-menu tree" data-widget="tree">
+
+			<li class=""><a href="#"> <i class="fa fa-files-o"></i> <span>waybills</span>
+					<span class="pull-right-container"> </span>
+			</a>
+
+				<ul class="treeview-menu" style="display: block;">
+					<li><a href="/cargoarchive/waybills/"> <ion-icon
+								name="list-box"></ion-icon> view list waybill
+					</a></li>
+					<li><a href="/cargoarchive/waybills/new"> <ion-icon
+								ios="ios-card" md="md-card"></ion-icon> create new waybill
+					</a></li>
+				</ul>
+				</li>
+				<li class=""><a href="#"> <i class="fa fa-files-o"></i> <span>manifests</span>
+						<span class="pull-right-container"> </span>
+				</a>
+					<ul class="treeview-menu" style="display: block;">
+						<li>
+							<a href="/cargoarchive/manifests/"> 
+								<ion-icon name="list-box"/>
+								 view list manifest
+							</a>
+						</li>
+						<li>
+						<a href="/cargoarchive/manifests/new">
+						 <ion-icon ios="ios-card" md="md-card"/> create new manifest
+						</a></li>
+					</ul>
+				</li>
+
+			<li class="active treeview menu-open">
+			<a href="/cargoarchive/logout">
+			 <i class="fa fa-dashboard"></i>
+				  <span>log out</span> 
+				  <span class="pull-right-container"> </span>
+					</a> 
+					<ion-icon ios="ios-exit" md="md-exit"/>
+			</li>
+		</ul>
+	</section>
+
+</aside>
+
+

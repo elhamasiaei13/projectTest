@@ -1,0 +1,60 @@
+	 <aside class="main-sidebar" th:fragment="sidebar"   >
+		sidebar: style can be found in sidebar.less
+			<section class="sidebar" >
+				Sidebar user panel
+
+				<ul class="sidebar-menu tree" data-widget="tree">
+					<li class="header">MAIN NAVIGATION</li>
+					<li class="active treeview menu-open">
+						<a href="#"> 
+							<i class="fa fa-dashboard"></i> 
+							<span>Dashboard</span>
+							<span class="pull-right-container">
+							</span>
+						</a>
+					</li>
+					
+					<li class="">
+						<a href="#"> <i class="fa fa-files-o"></i>
+								<span>waybills</span> 
+								<span class="pull-right-container">
+								</span>
+						</a>
+						<ul class="treeview-menu" style="display: block;">
+							<li><a href="/cargoarchive/waybills/">
+							<i class="fa fa-circle-o"></i> view list waybill</a>
+							</li>
+							<li><a href="/cargoarchive/waybills/new">
+							<i class="fa fa-circle-o"></i> create new waybill</a></li>
+						</ul>
+					</li>
+					
+					<li class="">
+						<a href="#"> <i class="fa fa-files-o"></i>
+								<span>manifests</span> 
+								<span class="pull-right-container">
+								</span>
+						</a>
+						<ul class="treeview-menu" style="display: block;">
+							<li><a href="/cargoarchive/manifests/">
+							<i class="fa fa-circle-o"></i> view list manifest</a>
+							</li>
+							<li><a href="/cargoarchive/manifests/new">
+							<i class="fa fa-circle-o"></i> create new manifest</a></li>
+						</ul>
+					</li>
+					
+					<li class="active treeview menu-open">
+						<a href="/cargoarchive/logout"> 
+							<i class="fa fa-dashboard"></i> 
+							<span>log out</span>
+							<span class="pull-right-container">
+							</span>
+						</a>
+					</li>
+					</ul>
+					</section>
+					
+	</aside> 
+
+

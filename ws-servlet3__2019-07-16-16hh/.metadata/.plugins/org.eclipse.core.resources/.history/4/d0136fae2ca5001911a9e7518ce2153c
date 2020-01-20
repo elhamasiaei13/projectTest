@@ -1,0 +1,32 @@
+
+<header class="main-header" th:fragment="header"
+	xmlns:th="http://www.w3.org/1999/xhtml">
+
+	<a href="index2.html" class="logo"> <span class="logo-mini"><b>c</b>Archive</span>
+		<span class="logo-lg"><b>Cargo</b>Archive</span>
+	</a>
+
+	<nav class="navbar navbar-static-top navbar-inverse">
+		<!-- Sidebar toggle button-->
+		<a href="#" class="sidebar-toggle"> <ion-icon ios="ios-menu"
+				md="md-menu"></ion-icon>
+		</a>
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+				<!-- Messages: style can be found in dropdown.less-->
+				<li class="dropdown user user-menu">
+					
+				</li>
+				<li class="dropdown user user-menu open"><a href="#"
+					class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+						<span class="hidden-xs"  th:text="'user Name is : '"></span>
+						<span class="hidden-xs" th:text="${currentUser.getUsername()}"></span>
+				</a>
+		</div>
+	</nav>
+</header>
+
+<!-- 
+<h2>
+		<span th:text="${currentUser.getUsername()}"> username is:</span>
+	</h2> -->

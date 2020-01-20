@@ -1,0 +1,5 @@
+package com.parvanpajooh.cargoarchive.controller;
+
+public class GlobalControllerAdvice {
+
+}

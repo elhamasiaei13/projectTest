@@ -1,0 +1,11 @@
+package com.parvanpajooh.cargoarchive.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@ControllerAdvice
+public class GlobalControllerAdvice {
+	 @ModelAttribute("currentUser")
+	    public UserDetails getCurrentUser(Authentication authentication) {
+	        return (authentication == null) ? null : (UserDetails) authentication.getPrincipal();
+	    }
+} 

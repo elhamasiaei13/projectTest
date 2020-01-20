@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<meta charset="UTF-8">
+<title>Manifests</title>
+</head>
+<body>
+	<div layout:fragment="content">
+
+		<section class="content-header">
+			<h1>
+				Manifest(s)<small> List of all manifests</small>
+			</h1>
+
+		</section>
+
+		<!-- Main content -->
+		<section class="content">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="box">
+						<div class="box-header">
+							<h3 class="box-title">Manifests List</h3>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body">
+							<div id="example2_wrapper"
+								class="dataTables_wrapper form-inline dt-bootstrap">
+								<div class="row">
+									<div class="col-sm-6"></div>
+									<div class="col-sm-6"></div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<table id="example2"
+											class="table table-bordered table-hover dataTable"
+											role="grid" aria-describedby="example2_info">
+											<thead>
+												<tr role="row">
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">Client ID</th>
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">Manifest Number</th>
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">Description</th>
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">Create Date</th>
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">Create UserName</th>
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">update Date</th>
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">update UserName</th>
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">originalFileName</th>
+													<th class="sorting_asc" tabindex="0"
+														aria-controls="example2" rowspan="1" colspan="1"
+														aria-label="Rendering engine: activate to sort column descending"
+														aria-sort="ascending">set</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr role="row" th:each="thisManifest : ${manifests}">
+													<td th:text="${thisManifest.id}"></td>
+													<td th:text="${thisManifest.manifestNumber}"></td>
+													<td th:text="${thisManifest.description}"></td>
+													<td th:text="${thisManifest.createDate}"></td>
+													<td th:text="${thisManifest.createUserName}"></td>
+													<td th:text="${thisManifest.updateDate}"></td>
+													<td th:text="${thisManifest.updateUserName}"></td>
+													<td th:text="${thisManifest.originalFileName}"></td>
+													<td>
+														<a th:href="@{/manifests/__${thisManifest.id}__}">
+															<span class="glyphicon glyphicon-eye-open" />
+														</a>
+														<a
+															th:href="@{/manifests/__${thisManifest.id}__/update}">
+															<span class="glyphicon glyphicon-edit" />
+														</a>
+														<a
+															th:href="@{/manifests/delete/__${thisManifest.id}__}">
+																<span class="glyphicon glyphicon-trash" />
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+</body>
+</html>

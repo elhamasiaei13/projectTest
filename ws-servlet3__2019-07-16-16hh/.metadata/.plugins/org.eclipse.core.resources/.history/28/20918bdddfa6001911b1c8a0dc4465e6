@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:switch="${message}">
+    <div th:case="'Success'" class="alert alert-success">
+        <strong>Success!</strong> Operation performed successfully.
+    </div>
+    <div th:case="'Failed'" class="alert alert-danger">
+        <strong>Failure!</strong> Operation failed. Please try again 
+    </div>
+</div>
+
+
+<!-- <span th:text="${message}"></span>
+<h3 th:text="${message}"></h3>
+<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"/> -->
+</body>
+</html>

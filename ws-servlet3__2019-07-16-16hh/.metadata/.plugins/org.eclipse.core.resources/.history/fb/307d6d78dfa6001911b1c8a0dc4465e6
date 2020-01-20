@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>${success}+ ${"success"}</h3>
+<div>Web Application. Passed parameter : th:text="${message}"</div>
+
+<span th:text="${message}"></span>
+<h3 th:text="${message}"></h3>
+<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"/>
+</body>
+</html>

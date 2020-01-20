@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+	style="height: auto; min-height: 100%;">
+<head>
+<link rel="stylesheet" th:href="@{/resources/css/main.css}"
+	type="text/css" />
+
+ 
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}" >
+ 
+<!-- Font Awesome -->
+<link rel="stylesheet" th:href="@{/resources/css/font-awesome.min.css}">
+
+<!-- 
+<link rel="stylesheet"
+	th:href="@{/resources/css/font-awesome.min.css}"> -->
+
+<!-- Ionicons -->
+<link rel="stylesheet"
+	th:href="@{/resources/css/ionicons.min.css}">
+<!-- 		<link rel="stylesheet" href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" >
+ -->
+<!-- Theme style -->
+<link rel="stylesheet"
+	th:href="@{/resources/css/AdminLTE.min.css}">
+
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+	       folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet"
+	th:href="@{/resources/css/skins/_all-skins.min.css}">
+	
+	 <!-- Google Font -->
+  <link rel="stylesheet"
+       th:href="@{/resources/css/main.css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic}">
+	
+</head>
+
+<body class="skin-blue sidebar-mini">
+
+	<div class="wrapper">
+
+		<div th:replace="fragments/header :: header"></div>
+
+
+		<div th:replace="fragments/sidebar :: sidebar"></div>
+
+		<div class="content-wrapper">
+			<div layout:fragment="content"></div>
+		</div>
+	</div>
+	
+
+	<!-- jQuery 3 -->
+	<script th:src="@{/resources/js/jquery.min.js}"></script>
+	
+	<!-- Bootstrap 3.3.7 -->
+	<script th:src="@{/resources/js/bootstrap.min.js}"></script>
+		
+	<!-- DataTables -->
+	<script th:src="@{/resources/js/dataTables.bootstrap.min.js}"></script>
+	<script th:src="@{/resources/js/jquery.dataTables.min.js}"></script>
+	
+	<!-- FastClick -->
+	<script src="https://adminlte.io/themes/AdminLTE/bower_components/fastclick/lib/fastclick.js"></script>
+	
+	<!-- AdminLTE App -->
+	<script th:src="@{/resources/js/adminlte.min.js}"></script>
+	
+	<!-- AdminLTE for demo purposes -->
+	<script th:src="@{/resources/js/demo.js}"></script>
+	
+		<script
+			th:src="@{/resources/js/jquery-ui.min.js}"></script>
+		<script
+			th:src="@{/resources/js/bootstrap3-wysihtml5.all.min.js}"></script>
+			
+			<!-- SlimScroll -->
+		<script
+			th:src="@{/resources/js/jquery.slimscroll.min.js}"></script>
+		<!-- ioniconic  -->
+		
+	 	<script th:src="@{/resources/js/ionic.js}"></script>
+		
+	 <script src="https://unpkg.com/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+	 <script src="https://adminlte.io/themes/AdminLTE/bower_components/fastclick/lib/fastclick.js"></script>
+	 
+
+</body>
+</html>
